@@ -25,7 +25,7 @@ def sequ(fa):
 	
 	return sequences
 	
-# Find all ATG indexs	
+# Find all indexs	
 def find_index(sequence,n):
 		start_position = n-1
 		start_indexs = []
@@ -40,7 +40,7 @@ def find_index(sequence,n):
 			stops =["TAA", "TGA", "TAG"]
 			if sequence[i:i+3] in stops:
 				stop_indexs.append(i)
-		ind=[]
+		ind=[start_position,start_indexs,stop_indexs]
 		return ind
 		
 	
@@ -82,8 +82,9 @@ def contar(fa):
 #What is the longest sequence and what is the shortest sequence? 
 
 
-def longuitud(fa):
+def longitud(fa):
 	sequences=sequ(fa)
+	
 
 	lengths = [len(i) for i in sequences]
 	#print lengths
@@ -178,7 +179,7 @@ print ("Hay:" + str(HowMany))
 
 #Punto 2
 print 'Punto 2'
-longuitud(fa)
+longitud(fa)
 
 #Punto 3 y 4
 print 'Punto 3 y 4'
