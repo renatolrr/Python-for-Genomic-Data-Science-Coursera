@@ -26,7 +26,22 @@ def sequ(fa):
 	return sequences
 	
 # Find all ATG indexs	
-#def atg_index((sequence,n):
+def find_index(sequence,n):
+		start_position = n-1
+		start_indexs = []
+		stop_indexs = []
+		for i in range(n-1, len(sequence), 3):
+			if sequence[i:i+3] == "ATG":
+				start_indexs.append(i)
+		
+
+		# Find all stop codon indexs
+		for i in range(n-1, len(sequence), 3):
+			stops =["TAA", "TGA", "TAG"]
+			if sequence[i:i+3] in stops:
+				stop_indexs.append(i)
+		ind=[]
+		return ind
 		
 	
 				
