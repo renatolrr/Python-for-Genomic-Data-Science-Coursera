@@ -156,10 +156,12 @@ punto6(fa)
 
 #Punto 7
 print 'gi|142022655|gb|EQ086233.1|97'
+print 'Hay que cambiar la cadena que se busca'
 num="gi|142022655|gb|EQ086233.1|97"
 find_idenfitier(num)
 
 #Punto 8,9 y 10
+print 'Modificar el numero en la busqueda de string, dependiendo de la pregunta'
 num=6
 find_length(num)
 
